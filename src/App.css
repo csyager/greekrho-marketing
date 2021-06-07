@@ -1,38 +1,93 @@
-.App {
-  text-align: center;
+div.overlay-text {
+  padding-top: 12vh;
+  padding-left: 3vh;
+  z-index: 1;
+  position: absolute;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+h1.overlay-title {
+  font-family: "Roboto Slab";
+  font-size: 6vw;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+p.overlay-lead {
+  color: white;
+  width: 60vw;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (min-width: 300px) {
+  h1.overlay-title {
+    font-size: 10vw;
   }
-  to {
-    transform: rotate(360deg);
+  p.overlay-lead {
+    font-size: 5vw;
+    width: 45vw;
   }
+}
+
+@media (min-width: 600px) {
+  h1.overlay-title {
+    font-size: 6vw;
+  }
+  p.overlay-lead {
+    font-size: 3vw;
+    width: 35vw;
+  }
+}
+
+@media (min-width: 1300px) {
+  h1.overlay-title {
+    font-size: 5vw;
+  }
+  p.overlay-lead {
+    padding-left: 2vw;
+    width: 25vw;
+    font-size: 1.5vw;
+  }
+}
+
+.square-overlay {
+  background: #209ceebb;
+  width: 25vw;
+  height: 40vh;
+  position: absolute;
+  left: 0vh;
+  top: 0vh;
+}
+.triangle-overlay {
+  background: #209CEEBB;
+  display: inline-block;
+  position: absolute;
+  top: 0vh;
+}
+.triangle-overlay:before {
+  border-left: 20vh solid #209CEEBB;
+  border-top: 20vh solid transparent;
+  border-bottom: 20vh solid transparent;
+  content: "";
+  left: 25vw;
+  position: absolute;
+}
+
+img.carousel-image {
+  height: 40vh;
+  object-fit: cover;
+}
+
+div.carousel {
+  z-index: -1;
+}
+
+div.primary-card {
+  border-color: #209CEE;
+  margin-bottom: 15px;
+}
+
+div.home-paragraph {
+  border: 1px solid;
+  border-radius: 10px;
+  border-color: #209CEE;
+  padding: 20px;
+  margin-bottom: 15px;
 }
