@@ -6,12 +6,20 @@ import {
   Link
 } from "react-router-dom";
 import Home from './components/Home.js';
+import Register from './components/Register.js';
+import Demos from './components/Demos.js';
 import './App.css';
 
 function App() {
   return (
     <Router>
       <Switch>
+        <Route path="/demos">
+          <Demos />
+        </Route>
+        <Route path="/register">
+          <Register />
+        </Route>
         <Route path="/">
           <Home />
         </Route>

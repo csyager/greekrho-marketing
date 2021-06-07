@@ -2,6 +2,7 @@ import React from "react";
 import alderman from "./../images/alderman.jpeg"
 import lawn from "./../images/lawn.jpeg"
 import rotunda from "./../images/rotunda.jpeg"
+import icon from "./../images/android-chrome-192x192.png"
 
 function Home() {
     return (
@@ -11,7 +12,7 @@ function Home() {
             <div className="triangle-overlay">
             </div>
             <div className="overlay-text">
-                <h1 className="overlay-title">GreekRho</h1>
+                <h1 className="overlay-title">GreekRho</h1>     
                 <p className="lead overlay-lead">Enabling Greek organizations in the new normal</p>
             </div>
             
@@ -39,7 +40,7 @@ function Home() {
                 <div className="row">
                     <div className="col-md-4">
                         <div className="card primary-card">
-                            <div className="card-header">Demos</div>
+                            <div className="card-header"><a href="/demos">Demos</a></div>
                             <div className="card-body">
                                 <p className="card-text">Browse our library of demonstration videos detailing the various features and uses of the GreekRho platform</p>
                             </div>
@@ -47,7 +48,7 @@ function Home() {
                     </div>
                     <div className="col-md-4">
                         <div className="card primary-card">
-                            <div className="card-header"><a href="https://github.com/csyager/greeklink-core">Source Code</a></div>
+                            <div className="card-header"><a href="https://github.com/csyager/greeklink-core" target="_blank">Source Code</a></div>
                             <div className="card-body">
                                 <p className="card-text">Examine the open-source codebase of the GreekRho platform</p>
                             </div>
@@ -55,7 +56,7 @@ function Home() {
                     </div>
                     <div className="col-md-4">
                         <div className="card primary-card">
-                            <div className="card-header">Register</div>
+                            <div className="card-header"><a href="/register">Register</a></div>
                             <div className="card-body">
                                 <p className="card-text">GreekRho is made more affordable by sharing infrastructure.  Register to use the official GreekRho platform here.</p>
                             </div>
