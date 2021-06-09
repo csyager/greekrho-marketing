@@ -6,7 +6,7 @@ function Register() {
         <>
             <Navbar active="Register"/>
             <div className="container">
-                <img src={GreekRho_Plus} className="img-responsive greekrho-plus-logo"/>
+                <img src={GreekRho_Plus} className="img-responsive greekrho-plus-logo" alt="greekrho-plus-logo"/>
                 <div className="paragraph-bubble">
                     <p>GreekRho+ is our tailored solution for hosting the GreekRho application in the cloud.  While our source code is free to use, there is a cost associated with running the application from servers on the cloud.  We've taken strides to reduce this cost as much as possible, so that the use of our product is as affordable as it is performant.  GreekRho+ takes away the stress of running your GreekRho instance yourself, and provides the support and maintenance of our engineers at an affordable price.  See the cost breakdown below to compare the cost of hosting the app yourself, vs. the cost of using GreekRho+.</p>
                     <h3>Cost Breakdown</h3>

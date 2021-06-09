@@ -2,7 +2,6 @@ import React from "react";
 import alderman from "./../images/alderman.jpeg"
 import lawn from "./../images/lawn.jpeg"
 import rotunda from "./../images/rotunda.jpeg"
-import icon from "./../images/android-chrome-192x192.png"
 import Navbar from "./Navbar";
 import { Link } from "react-router-dom";
 
@@ -52,7 +51,7 @@ function Home() {
                     </div>
                     <div className="col-md-4">
                         <div className="card primary-card">
-                            <div className="card-header"><a href="https://github.com/csyager/greeklink-core" target="_blank">Source Code</a></div>
+                            <div className="card-header"><a href="https://github.com/csyager/greeklink-core" target="_blank" rel="noreferrer">Source Code</a></div>
                             <div className="card-body">
                                 <p className="card-text">Examine the open-source codebase of the GreekRho platform</p>
                             </div>

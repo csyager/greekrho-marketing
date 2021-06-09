@@ -2,8 +2,7 @@ import React from "react";
 import {
   HashRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import Home from './components/Home.js';
 import Register from './components/Register.js';
