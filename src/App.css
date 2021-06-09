@@ -1,3 +1,11 @@
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto Slab', serif;
+}
+
+a.navbar-brand {
+  font-family: 'Roboto Slab', serif;
+}
+
 div.overlay-text {
   padding-top: 12vh;
   padding-left: 3vh;
@@ -6,7 +14,7 @@ div.overlay-text {
 }
 
 h1.overlay-title {
-  font-family: "Roboto Slab";
+  font-family: 'Roboto Slab', serif;
   font-size: 6vw;
   color: white;
 }
@@ -53,13 +61,13 @@ p.overlay-lead {
   height: 40vh;
   position: absolute;
   left: 0vh;
-  top: 0vh;
+  top: 56px;
 }
 .triangle-overlay {
   background: #209CEEBB;
   display: inline-block;
   position: absolute;
-  top: 0vh;
+  top: 56px;
 }
 .triangle-overlay:before {
   border-left: 20vh solid #209CEEBB;
@@ -84,10 +92,15 @@ div.primary-card {
   margin-bottom: 15px;
 }
 
-div.home-paragraph {
+div.paragraph-bubble {
   border: 1px solid;
   border-radius: 10px;
   border-color: #209CEE;
   padding: 20px;
   margin-bottom: 15px;
+}
+
+img.greekrho-plus-logo {
+  width: 100%;
+  max-width: 600px;
 }

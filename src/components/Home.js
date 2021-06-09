@@ -3,9 +3,12 @@ import alderman from "./../images/alderman.jpeg"
 import lawn from "./../images/lawn.jpeg"
 import rotunda from "./../images/rotunda.jpeg"
 import icon from "./../images/android-chrome-192x192.png"
+import Navbar from "./Navbar";
 
 function Home() {
     return (
+        <>
+        <Navbar active="Home"/>
         <div>
             <div className="square-overlay">     
             </div>
@@ -31,7 +34,7 @@ function Home() {
             </div>
             <br />
             <div className="container">
-                <div className="home-paragraph">
+                <div className="paragraph-bubble">
                     <p>GreekRho is an open-source platform for student clubs, teams, and social groups to manage their day to day organizational needs.  We believe that the best platform for small organizations is the one that we build together.  That's why our platform is fully open source; you can download the code, change it to suit your needs, and use it all for <i><b>free</b></i>.  Yes, you read that right.  Our code base is free to use under the MIT License, meaning you can take our work and use it to springboard your own project.  Or, if that sounds like a lot of work, you're welcome to contribute to our code base and make it better for everyone who uses it.</p>
                     <p>Now, more than ever, we need to leverage modern organizational tools without shelling out to use them.  Let's work together, stop paying crazy fees for tools we don't use, and build a platform that works for us.</p>
                 </div>
@@ -56,15 +59,16 @@ function Home() {
                     </div>
                     <div className="col-md-4">
                         <div className="card primary-card">
-                            <div className="card-header"><a href="/register">Register</a></div>
+                            <div className="card-header"><a href="/greekrho+">GreekRho+</a></div>
                             <div className="card-body">
-                                <p className="card-text">GreekRho is made more affordable by sharing infrastructure.  Register to use the official GreekRho platform here.</p>
+                                <p className="card-text">Looking for an affordable way to run your application?  GreekRho+ relies on shared infrastructure to deliver a solution that's <b>cheaper than trying to do it yourself.</b>  Click here to learn more!</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        </>
     )
 }
 

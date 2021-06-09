@@ -17,7 +17,7 @@ function App() {
         <Route path="/demos">
           <Demos />
         </Route>
-        <Route path="/register">
+        <Route path="/greekrho+">
           <Register />
         </Route>
         <Route path="/">

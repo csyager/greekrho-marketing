@@ -27,8 +27,13 @@ function Navbar(props) {
                     <NavLink exact className="nav-link" to="/demos">Demos</NavLink>
                 </li>
                 <li className={registerClass}>
-                    <NavLink exact className="nav-link" to="/register">Register</NavLink>
+                    <NavLink exact className="nav-link" to="/greekrho+">GreekRho+</NavLink>
                 </li>
+                </ul>
+                <ul class="nav navbar-nav ml-auto">
+                    <li>
+                        <a className="nav-link" href="#">Login</a>
+                    </li>
                 </ul>
             </div>
         </nav>
