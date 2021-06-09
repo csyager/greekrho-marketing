@@ -4,6 +4,7 @@ import lawn from "./../images/lawn.jpeg"
 import rotunda from "./../images/rotunda.jpeg"
 import icon from "./../images/android-chrome-192x192.png"
 import Navbar from "./Navbar";
+import { Link } from "react-router-dom";
 
 function Home() {
     return (
@@ -43,7 +44,7 @@ function Home() {
                 <div className="row">
                     <div className="col-md-4">
                         <div className="card primary-card">
-                            <div className="card-header"><a href="/demos">Demos</a></div>
+                            <div className="card-header"><Link to="/demos">Demos</Link></div>
                             <div className="card-body">
                                 <p className="card-text">Browse our library of demonstration videos detailing the various features and uses of the GreekRho platform</p>
                             </div>
@@ -59,7 +60,7 @@ function Home() {
                     </div>
                     <div className="col-md-4">
                         <div className="card primary-card">
-                            <div className="card-header"><a href="/greekrho+">GreekRho+</a></div>
+                            <div className="card-header"><Link to="/greekrho+">GreekRho+</Link></div>
                             <div className="card-body">
                                 <p className="card-text">Looking for an affordable way to run your application?  GreekRho+ relies on shared infrastructure to deliver a solution that's <b>cheaper than trying to do it yourself.</b>  Click here to learn more!</p>
                             </div>

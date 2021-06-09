@@ -61,13 +61,11 @@ p.overlay-lead {
   height: 40vh;
   position: absolute;
   left: 0vh;
-  top: 56px;
 }
 .triangle-overlay {
   background: #209CEEBB;
   display: inline-block;
   position: absolute;
-  top: 56px;
 }
 .triangle-overlay:before {
   border-left: 20vh solid #209CEEBB;

@@ -32,7 +32,7 @@ function Navbar(props) {
                 </ul>
                 <ul class="nav navbar-nav ml-auto">
                     <li>
-                        <a className="nav-link" href="#">Login</a>
+                        <a className="nav-link" href="https://greek-rho.com">Login</a>
                     </li>
                 </ul>
             </div>
