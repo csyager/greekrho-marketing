@@ -6,15 +6,15 @@ import {
 } from "react-router-dom";
 import Home from './components/Home.js';
 import Register from './components/Register.js';
-import Demos from './components/Demos.js';
+import Documentation from './components/Documentation.js';
 import './App.css';
 
 function App() {
   return (
     <Router>
       <Switch>
-        <Route path="/demos">
-          <Demos />
+        <Route path="/documentation">
+          <Documentation />
         </Route>
         <Route path="/greekrho+">
           <Register />

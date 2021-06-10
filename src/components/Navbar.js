@@ -4,9 +4,9 @@ import { NavLink } from 'react-router-dom'
 function Navbar(props) {
     var homeClass = "nav-item";
     var registerClass = "nav-item";
-    var demosClass = "nav-item";
+    var documentationClass = "nav-item";
     if (props.active === 'Home') homeClass += " active";
-    else if (props.active === 'Demos') demosClass += " active";
+    else if (props.active === 'Documentation') documentationClass += " active";
     else if (props.active === 'Register') registerClass += "active";
 
     return (
@@ -23,14 +23,14 @@ function Navbar(props) {
                 <li className={homeClass}>
                     <NavLink exact className="nav-link" to="/">Home</NavLink>
                 </li>
-                <li className={demosClass}>
-                    <NavLink exact className="nav-link" to="/demos">Demos</NavLink>
+                <li className={documentationClass}>
+                    <NavLink exact className="nav-link" to="/documentation">Documentation</NavLink>
                 </li>
                 <li className={registerClass}>
                     <NavLink exact className="nav-link" to="/greekrho+">GreekRho+</NavLink>
                 </li>
                 </ul>
-                <ul class="nav navbar-nav ml-auto">
+                <ul className="nav navbar-nav ml-auto">
                     <li>
                         <a className="nav-link" href="https://greek-rho.com">Login</a>
                     </li>

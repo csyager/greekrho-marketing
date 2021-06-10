@@ -43,9 +43,9 @@ function Home() {
                 <div className="row">
                     <div className="col-md-4">
                         <div className="card primary-card">
-                            <div className="card-header"><Link to="/demos">Demos</Link></div>
+                            <div className="card-header"><Link to="/documentation">Documentation</Link></div>
                             <div className="card-body">
-                                <p className="card-text">Browse our library of demonstration videos detailing the various features and uses of the GreekRho platform</p>
+                                <p className="card-text">Browse our documentation library, including use guides and demonstration videos detailing the various features and uses of the GreekRho platform</p>
                             </div>
                         </div>
                     </div>
