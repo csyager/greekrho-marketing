@@ -16,7 +16,7 @@ function Home() {
             </div>
             <div className="overlay-text">
                 <h1 className="overlay-title">GreekRho</h1>     
-                <p className="lead overlay-lead">Enabling Greek organizations in the new normal</p>
+                <p className="lead overlay-lead">The open-source online tool for student organizations</p>
             </div>
             
             <div id="carousel" className="carousel slide" data-ride="carousel">
