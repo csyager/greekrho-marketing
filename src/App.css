@@ -55,6 +55,12 @@ p.overlay-lead {
   }
 }
 
+@media (max-height: 550px) {
+  p.overlay-lead {
+    display: none
+  }
+}
+
 .square-overlay {
   background: #209ceebb;
   width: 25vw;

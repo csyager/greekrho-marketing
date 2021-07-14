@@ -19,4 +19,16 @@ function Rush() {
     )
 }
 
+function CurrentRushees() {
+    return (
+        <>
+        <h1>Current Rushees</h1>
+        <p>The Current Rushees submodule shows all potential new members who have not been <code>cut</code> from rush.  Each rushee can be clicked on to view their profile page, which contains more detailed information about the rushee.  The list can be searched by the name of the rushee using the search field at the top of the page.  The list can also be filtered by criteria including Name, round, major, year, or hometown.</p>
+        </>
+    )
+}
+
 export default Rush;
+export {
+    CurrentRushees
+}

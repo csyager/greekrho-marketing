@@ -1,7 +1,7 @@
 import BaseDoc from './BaseDoc'
 import Social from './Social'
 import Calendar from './Calendar'
-import Rush from './Rush'
+import Rush, {CurrentRushees} from './Rush'
 import Resources from './Resources'
 
 export {
@@ -9,5 +9,6 @@ export {
     Social,
     Calendar,
     Rush,
+    CurrentRushees,
     Resources
 }

@@ -26,6 +26,7 @@ function DocumentationNav(props) {
                         <DocumentationNavLink action={props.setCurrentPage} currentPage={props.currentPage} level="0" value="Social" />
                         <DocumentationNavLink action={props.setCurrentPage} currentPage={props.currentPage} level="0" value="Calendar" />
                         <DocumentationNavLink action={props.setCurrentPage} currentPage={props.currentPage} level="0" value="Rush" />
+                        <DocumentationNavLink action={props.setCurrentPage} currentPage={props.currentPage} level="1" value="Current Rushees" />
                         <DocumentationNavLink action={props.setCurrentPage} currentPage={props.currentPage} level="0" value="Resources" />
                 </nav>
             </div>

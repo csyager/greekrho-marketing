@@ -35,7 +35,7 @@ function Home() {
             <br />
             <div className="container">
                 <div className="paragraph-bubble">
-                    <p>GreekRho is an open-source platform for student clubs, teams, and social groups to manage their day to day organizational needs.  We believe that the best platform for small organizations is the one that we build together.  That's why our platform is fully open source; you can download the code, change it to suit your needs, and use it all for <i><b>free</b></i>.  Yes, you read that right.  Our code base is free to use under the MIT License, meaning you can take our work and use it to springboard your own project.  Or, if that sounds like a lot of work, you're welcome to contribute to our code base and make it better for everyone who uses it.</p>
+                    <p>GreekRho is an open-source platform for student clubs, teams, and social groups to manage their day-to-day organizational needs. We believe that the best platform for small organizations is the one that we build together. That's why our platform is open source; you can download the code, change it to suit your needs, and run our code on any machine all for <b><i>free</i></b>.</p>
                     <p>Now, more than ever, we need to leverage modern organizational tools without shelling out to use them.  Let's work together, stop paying crazy fees for tools we don't use, and build a platform that works for us.</p>
                 </div>
             </div>
@@ -53,7 +53,7 @@ function Home() {
                         <div className="card primary-card">
                             <div className="card-header"><a href="https://github.com/csyager/greeklink-core" target="_blank" rel="noreferrer">Source Code</a></div>
                             <div className="card-body">
-                                <p className="card-text">Examine the open-source codebase of the GreekRho platform</p>
+                                <p className="card-text">Examine the open-source codebase of the GreekRho platform on GitHub, where you can see the code, submit issues, and make contributions.</p>
                             </div>
                         </div>
                     </div>
