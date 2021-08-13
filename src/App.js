@@ -7,10 +7,13 @@ import {
 import Home from './components/Home.js';
 import Register from './components/Register.js';
 import Documentation from './components/Documentation.js';
+import Footer from './components/Footer.js';
 import './App.css';
 
 function App() {
   return (
+	<>
+		<div className="content-div">
     <Router>
       <Switch>
         <Route path="/documentation">
@@ -24,7 +27,9 @@ function App() {
         </Route>
       </Switch>
     </Router>
-    
+		</div>
+		{/* <Footer /> */}
+	</>
   );
 }
 
