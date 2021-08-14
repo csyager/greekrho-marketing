@@ -1,5 +1,6 @@
+import React, { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCaretDown } from '@fortawesome/free-solid-svg-icons'
+import { faCaretDown, faCaretUp } from '@fortawesome/free-solid-svg-icons'
 
 function DocumentationNavLink(props) {
     function handleClick(e) {
@@ -16,11 +17,33 @@ function DocumentationNavLink(props) {
     )
 }
 
+function DropdownCaret(props) {
+	if (props.caretDown) {
+		return <FontAwesomeIcon icon={ faCaretDown } />
+	} else {
+		return <FontAwesomeIcon icon={ faCaretUp } />
+	}
+}
+
 function DocumentationNav(props) {
+	const [caretDown, setCaretDown] = useState(true);
+	const [caretDownFade, setCaretDownFade] = useState("fade-in");
+
+	const toggleCaretDown = () => {
+		setCaretDownFade("fade-out");
+		setTimeout(() => {
+			if (caretDown) {
+				setCaretDown(false);
+			} else {
+				setCaretDown(true);
+			}
+			setCaretDownFade("fade-in");
+		}, 500);
+	}
 
     return (
         <div className="documentation-nav-container">
-            <h5>Navigation <a data-toggle="collapse" href="#documentationNavigation" aria-expanded="false" aria-controls="documentationNavigation"><FontAwesomeIcon icon={ faCaretDown } /></a></h5> 
+			<h5>Navigation <a onClick={ toggleCaretDown } data-toggle="collapse" href="#documentationNavigation" aria-expanded="false" aria-controls="documentationNavigation" className={ caretDownFade }><DropdownCaret caretDown={ caretDown } /></a></h5> 
             <div className="collapse show" id="documentationNavigation">
                 <nav className="nav flex-column nav-pills documentation-nav">
                         <DocumentationNavLink action={props.setCurrentPage} currentPage={props.currentPage} level="0" value="Social" />
