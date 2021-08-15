@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Navbar from "./Navbar";
 import GreekRho_Plus from "./../images/greekrho+_logo.png";
 import ClipLoader from "react-spinners/ClipLoader";
@@ -13,7 +13,6 @@ function RegisterForm(props) {
 	});
 	const [loadingState, setLoadingState] = useState(false);
 
-    // TODO: add add change handler
 	const changeHandler = (e) => {
 		const {name, value} = e.target;
 		setFormState(prevState => ({
@@ -24,10 +23,6 @@ function RegisterForm(props) {
 
 	const [submitState, setSubmitState] = useState("Submit");
 	const [responseStatusCode, setResponseStatusCode] = useState(0);
-
-	const formSubmit = e => {
-		e.preventDefault();
-	}
 
 	const submitHandler = async (e) => {
 		e.preventDefault();
@@ -73,7 +68,7 @@ function RegisterForm(props) {
 				</div>
 				<div className="form-group">
 					<label htmlFor="registerNotes">Anything else we should know?</label>
-					<textarea className="form-control" id="registerNotes" rows="4" name="registerNotes" placeholder="Enter any additional notes here." value={formState.registerNotes} onChange={changeHandler} required/>
+					<textarea className="form-control" id="registerNotes" rows="4" name="registerNotes" placeholder="Enter any additional notes here." value={formState.registerNotes} onChange={changeHandler} />
 				</div>
 				<button type="submit" className="btn btn-primary"><ClipLoader color="#ffffff" size="20" loading={ loadingState } />{ submitState }</button>
 			</form>
