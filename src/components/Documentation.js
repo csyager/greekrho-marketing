@@ -12,10 +12,10 @@ function Documentation() {
             <div className="container documentation-container">
                 <h2>Documentation Library</h2>
                 <div className="row">
-                    <div className="col-md-2">
+                    <div className="col-lg-2">
                         <DocumentationNav currentPage={currentPage} setCurrentPage={setCurrentPage}/>
                     </div>
-                    <div className="col-md-10">
+                    <div className="col-lg-10">
                         <DocumentationBody currentPage={currentPage}/>
                     </div>
                 </div>
