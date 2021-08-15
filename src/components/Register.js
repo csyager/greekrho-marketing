@@ -1,14 +1,97 @@
+import React, { useState, useEffect } from "react";
 import Navbar from "./Navbar";
-import GreekRho_Plus from "./../images/greekrho+_logo.png"
+import GreekRho_Plus from "./../images/greekrho+_logo.png";
+import ClipLoader from "react-spinners/ClipLoader";
+
+function RegisterForm(props) {
+	const [formState, setFormState] = useState({
+		registerName: "",
+		registerEmail: "",
+		registerUniversity: "",
+		registerOrganization: "",
+		registerNotes: ""
+	});
+	const [loadingState, setLoadingState] = useState(false);
+
+    // TODO: add add change handler
+	const changeHandler = (e) => {
+		const {name, value} = e.target;
+		setFormState(prevState => ({
+			...prevState,
+			[name]: value
+		}));
+	};
+
+	const [submitState, setSubmitState] = useState("Submit");
+	const [responseStatusCode, setResponseStatusCode] = useState(0);
+
+	const formSubmit = e => {
+		e.preventDefault();
+	}
+
+	const submitHandler = async (e) => {
+		e.preventDefault();
+		const requestOptions = {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/json' },
+			body: JSON.stringify({
+				registerName: formState.registerName,
+				registerEmail: formState.registerEmail,
+				registerUniversity: formState.registerUniversity,
+				registerNotes: formState.registerNotes
+			})
+		};
+		setSubmitState("");
+		setLoadingState(true);
+		const response = await fetch('https://0r7mg5azkb.execute-api.us-east-1.amazonaws.com/register', requestOptions)
+		const status = await response.status;
+		console.log(status);
+		setResponseStatusCode(status);
+		setLoadingState(false);
+		props.setFormSubmitted(true);
+	}
+	
+	if (!props.formSubmitted) {
+		return (
+			<form onSubmit={submitHandler}>
+				<div className="form-group">
+					<label htmlFor="registerName">Full Name</label>
+					<input type="text" className="form-control" id="registerName" name="registerName" placeholder="Full name" value={formState.registerName} onChange={changeHandler} required/>
+				</div>
+				<div className="form-group">
+					<label htmlFor="registerEmail">Email Address</label>
+					<input type="email" className="form-control" id="registerEmail" name="registerEmail" placeholder="Email" value={formState.registerEmail} onChange={changeHandler} required/>
+					<small className="form-text text-muted">This email will be used to reach out regarding your registration, but will not be saved for later use.</small>
+				</div>
+				<div className="form-group">
+					<label htmlFor="registerUniversity">College/University</label>
+					<input type="text" className="form-control" id="registerUniversity" name="registerUniversity" placeholder="Name of College or University" value={formState.registerUniversity} onChange={changeHandler} required/>
+				</div>
+				<div className="form-group">
+					<label htmlFor="registerOrganization">Name of Organization</label>
+					<input type="text" className="form-control" id="registerOrganization" name="registerOrganization" placeholder="Name of Organization" value={formState.registerOrganization} onChange={changeHandler} required/>
+				</div>
+				<div className="form-group">
+					<label htmlFor="registerNotes">Anything else we should know?</label>
+					<textarea className="form-control" id="registerNotes" rows="4" name="registerNotes" placeholder="Enter any additional notes here." value={formState.registerNotes} onChange={changeHandler} required/>
+				</div>
+				<button type="submit" className="btn btn-primary"><ClipLoader color="#ffffff" size="20" loading={ loadingState } />{ submitState }</button>
+			</form>
+		);
+	} else if (responseStatusCode === 200) {
+		return (
+			<div className="alert alert-success" role="alert">Your response has been successfully submitted!  A representative will be in touch shortly.</div>
+		);
+	} else {
+		return (
+			<div className="alert alert-danger" role="alert">Your response could not be submitted.  Error code { responseStatusCode }</div>
+		);
+	}
+	
+}
 
 function Register() {
-    // TODO: save form fields in state
-    const [registerName, setRegisterName] = useState("");
-    const [registerEmail, setRegisterEmail] = useState("");
-    const [registerUniversity, setRegisterUniversity] = useState("");
-    const [registerOrganization, setRegisterOrganization] = useState("");
-    const [registerNotes, setRegisterNotes] = useState("");
-    // TODO: add submit handler
+	const [formSubmitted, setFormSubmitted] = useState(false);
     return (
         <>
             <Navbar active="Register"/>
@@ -17,30 +100,8 @@ function Register() {
                 <div className="paragraph-bubble">
                     <p>GreekRho+ is our tailored solution for hosting the GreekRho application in the cloud.  While our source code is free to use, there is a cost associated with running the application from servers on the cloud.  We've taken strides to reduce this cost as much as possible, so that the use of our product is as affordable as it is performant.  GreekRho+ takes away the stress of running your GreekRho instance yourself, and provides the support and maintenance of our engineers at an affordable price.  See the cost breakdown below to compare the cost of hosting the app yourself, vs. the cost of using GreekRho+.</p>
                     <p>If you're interested in registering for GreekRho+, fill out this form, and a representative will be in touch shortly.</p>
-                    <form>
-                        <div className="form-group">
-                            <label for="registerName">Full Name</label>
-                            <input type="text" className="form-control" id="registerName" placeholder="Full name" value={registerName}/>
-                        </div>
-                        <div className="form-group">
-                            <label for="registerEmail">Email Address</label>
-                            <input type="email" className="form-control" id="registerEmail" placeholder="Email" value={registerUniversity}/>
-                            <small className="form-text text-muted">This email will be used to reach out regarding your registration, but will not be saved for later use.</small>
-                        </div>
-                        <div className="form-group">
-                            <label for="registerUniversity">College/University</label>
-                            <input type="text" className="form-control" id="registerUniversity" placeholder="Name of College or University" value={registerUniversity}/>
-                        </div>
-                        <div className="form-group">
-                            <label for="registerOrganization">Name of Organization</label>
-                            <input type="text" className="form-control" id="registerOrganization" placeholder="Name of Organization" value={registerOrganization}/>
-                        </div>
-                        <div className="form-group">
-                            <label for="registerNotes">Anything else we should know?</label>
-                            <textarea className="form-control" id="registerNotes" rows="4" placeholder="Enter any additional notes here." value={registerNotes}/>
-                        </div>
-                        <button type="submit" className="btn btn-primary">Submit</button>
-                    </form>
+					<hr />
+					<RegisterForm formSubmitted={ formSubmitted } setFormSubmitted={ setFormSubmitted }/>
                 </div>
                 <div className="paragraph-bubble">
 
