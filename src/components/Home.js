@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import alderman from "./../images/alderman.jpeg"
-import lawn from "./../images/lawn.jpeg"
-import rotunda from "./../images/rotunda.jpeg"
+import chapel from "./../images/chapel.jpeg"
+import lawn from "./../images/lawn.jpg"
+import rotunda from "./../images/rotunda.jpg"
 import Navbar from "./Navbar";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -54,7 +54,7 @@ function Home() {
                         <img className="d-block w-100 carousel-image" src={lawn} alt="First slide" />
                     </div>
                     <div className="carousel-item">
-                        <img className="d-block w-100 carousel-image" src={alderman} alt="Second slide" />
+                        <img className="d-block w-100 carousel-image" src={chapel} alt="Second slide" />
                     </div>
                     <div className="carousel-item">
                         <img className="d-block w-100 carousel-image" src={rotunda} alt="Third slide" />

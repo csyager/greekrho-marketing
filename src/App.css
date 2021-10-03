@@ -124,3 +124,11 @@ a.doc-nav-link-1 {
 	opacity: 0;
 	transition: opacity 1s ease;
 }
+
+div.doc-vid-container {
+  max-width: 1000px
+}
+
+video.doc-vid {
+  border: 3px solid;
+}

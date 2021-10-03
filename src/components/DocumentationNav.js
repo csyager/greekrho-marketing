@@ -47,8 +47,8 @@ function DocumentationNav(props) {
             <div className="collapse show" id="documentationNavigation">
                 <nav className="nav flex-column nav-pills documentation-nav">
                         <DocumentationNavLink action={props.setCurrentPage} currentPage={props.currentPage} level="0" value="Social" />
-                        <DocumentationNavLink action={props.setCurrentPage} currentPage={props.currentPage} level="0" value="Calendar" />
                         <DocumentationNavLink action={props.setCurrentPage} currentPage={props.currentPage} level="0" value="Rush" />
+                        <DocumentationNavLink action={props.setCurrentPage} currentPage={props.currentPage} level="0" value="Calendar" />
                         <DocumentationNavLink action={props.setCurrentPage} currentPage={props.currentPage} level="0" value="Resources" />
                 </nav>
             </div>
