@@ -14,21 +14,21 @@ function App() {
   return (
 	<>
 		<div className="content-div">
-    <Router>
-      <Switch>
-        <Route path="/documentation">
-          <Documentation />
-        </Route>
-        <Route path="/greekrho+">
-          <Register />
-        </Route>
-        <Route path="/">
-          <Home />
-        </Route>
-      </Switch>
-    </Router>
+			<Router>
+				<Switch>
+					<Route path="/documentation">
+						<Documentation />
+					</Route>
+					<Route path="/greekrho+">
+						<Register />
+					</Route>
+					<Route path="/">
+						<Home />
+					</Route>
+				</Switch>
+			</Router>
 		</div>
-		{/* <Footer /> */}
+		<Footer />
 	</>
   );
 }
