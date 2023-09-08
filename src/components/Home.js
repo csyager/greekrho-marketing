@@ -3,7 +3,7 @@ import chapel from "./../images/chapel.jpeg"
 import lawn from "./../images/lawn.jpg"
 import rotunda from "./../images/rotunda.jpg"
 import Navbar from "./Navbar";
-import { Link } from "react-router-dom";
+import NavLink from "./NavLink";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCaretDown, faCaretUp } from '@fortawesome/free-solid-svg-icons'
 
@@ -64,10 +64,10 @@ function Home() {
             <br />
             <div className="container">
                 <div className="paragraph-bubble">
-					<p>GreekRho is the open-source platform for student clubs, teams, and social groups to manage their day-to-day organizational needs.  Our solution is free to use, and is built on the contributions of our users, with the goal of providing everything you need to run your organization, without charging for what you don't.  <a data-toggle="collapse" href="#learn-more" aria-expanded="false" aria-controls="learn-more" onClick={toggleLearnMore} className={learnMoreFade} ><LearnMoreButton learnMore={learnMore} /></a></p>
+					<p>GreekRho is the open-source platform for student clubs, teams, and social groups to manage their day-to-day organizational needs.  Our goal is to provide a cost-effective way to recruit new members, manage organizational schedules and goals, and streamline communication within your organization.  <a data-toggle="collapse" href="#learn-more" aria-expanded="false" aria-controls="learn-more" onClick={toggleLearnMore} className={learnMoreFade} ><LearnMoreButton learnMore={learnMore} /></a></p>
 					<div id="learn-more" className="collapse">
-						<p>We believe that the best platform for student organizations is the one that we build together. That's why our platform is open source; our code can be freely used, shared, downloaded, and contributed to.  Our vision at GreekRho is of a world where talented students and creators can work together to build the tools they need, rather than pay for them.  Our application is purpose-built to be extendible, and the underlying infrastructure is built to be shared.  While you are free to run our application on whatever platform you wish, our infrastructure offering <b>GreekRho+</b> relies on efficiently sharing underlying resources, so that you only pay for what you need.</p>
-						<p>Now, more than ever, we need to leverage modern organizational tools without shelling out to use them. Let's work together, stop paying for what we don't use, and build a platform that works for us.</p>
+						<p>We believe that the best platform for student organizations is one that we build together. That's why our platform is open source; our code can be freely used, shared, downloaded, and contributed to.  Nobody knows your organization's needs better than you do, which is why our application is purpose-built to be extendible.  Whatever your needs, GreekRho is a great place to start.</p>
+                        <p>While you are free to run our application on whatever platform you wish, our infrastructure offering <NavLink to="/greekrho+"><b>GreekRho+</b></NavLink> relies on efficiently sharing underlying resources, so that we can pass infrastructure savings to our customers.  GreekRho+ also runs our supported releases, giving you access to the most up-to-date versions of the platform.</p>
 					</div>
                </div>
             </div>
@@ -75,18 +75,18 @@ function Home() {
                 <div className="row">
 					<div className="col-md-4">
                         <div className="card primary-card">
-                            <div className="card-header"><Link to="/greekrho+">GreekRho+</Link></div>
+                            <div className="card-header"><NavLink to="/greekrho+">GreekRho+</NavLink></div>
                             <div className="card-body">
-                                <p className="card-text">Looking for an affordable way to run your application?  GreekRho+ relies on shared infrastructure to deliver a solution that's <b>cheaper than trying to do it yourself.</b>  Click here to learn more!</p>
+                                <p className="card-text">Want to use GreekRho but don't want to worry about the code?  We've got you covered.  GreekRho+ relies on shared infrastructure to deliver a solution that's <b>cheaper than doing it yourself.</b>  Click here to learn more!</p>
                             </div>
                         </div>
                     </div>
 
                     <div className="col-md-4">
                         <div className="card primary-card">
-                            <div className="card-header"><Link to="/documentation">Documentation</Link></div>
+                            <div className="card-header"><NavLink to="/documentation">Documentation</NavLink></div>
                             <div className="card-body">
-                                <p className="card-text">Browse our documentation library, including use guides and demonstration videos detailing the various features and uses of the GreekRho platform</p>
+                                <p className="card-text">Browse our documentation library, including use guides and demonstration videos detailing the various features and uses of the GreekRho platform.</p>
                             </div>
                         </div>
                     </div>

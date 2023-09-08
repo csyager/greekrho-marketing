@@ -1,6 +1,10 @@
 import icon from "./../images/android-chrome-512x512.png"; 
 
 function Footer() {
+
+	const scrollToTopOfScreen = () => {
+		document.documentElement.scrollTo(0, 0);
+	};
 	
 	return (
 		<footer className="footer">
@@ -29,7 +33,7 @@ function Footer() {
 									<td><a href="mailto:support@greekrho.com">support@greekrho.com</a></td>
 								</tr>
 								<tr>
-									<td><a href="/#/greekrho+">Request to use GreekRho+</a></td>
+									<td><a href="/#/greekrho+" onClick={ scrollToTopOfScreen }>Learn about GreekRho+</a></td>
 								</tr>
 							</tbody>
 						</table>
@@ -41,7 +45,7 @@ function Footer() {
 									<td>Resources</td>
 								</tr>
 								<tr>
-									<td><a href="/#/documentation">Documentation</a></td>
+									<td><a href="/#/documentation" onClick={ scrollToTopOfScreen }>Documentation</a></td>
 								</tr>
 								<tr>
 									<td><a href="https://github.com/csyager/greeklink-core" target="_blank" rel="noreferrer">Source code</a></td>

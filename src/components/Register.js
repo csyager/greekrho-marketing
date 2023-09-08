@@ -50,7 +50,7 @@ function RegisterForm(props) {
 		return (
 			<form onSubmit={submitHandler}>
 				<div className="form-group">
-					<label htmlFor="registerName">Full Name</label>
+					<label htmlFor="registerName">Name</label>
 					<input type="text" className="form-control" id="registerName" name="registerName" placeholder="Full name" value={formState.registerName} onChange={changeHandler} required/>
 				</div>
 				<div className="form-group">
@@ -64,7 +64,7 @@ function RegisterForm(props) {
 				</div>
 				<div className="form-group">
 					<label htmlFor="registerOrganization">Name of Organization</label>
-					<input type="text" className="form-control" id="registerOrganization" name="registerOrganization" placeholder="Name of Organization" value={formState.registerOrganization} onChange={changeHandler} required/>
+					<input type="text" className="form-control" id="registerOrganization" name="registerOrganization" placeholder="e.g., Delta Sig" value={formState.registerOrganization} onChange={changeHandler} required/>
 				</div>
 				<div className="form-group">
 					<label htmlFor="registerNotes">Anything else we should know?</label>
@@ -93,53 +93,12 @@ function Register() {
             <div className="container">
                 <img src={GreekRho_Plus} className="img-responsive greekrho-plus-logo" alt="greekrho-plus-logo"/>
                 <div className="paragraph-bubble">
-                    <p>GreekRho+ is our tailored solution for hosting the GreekRho application in the cloud.  While our source code is free to use, there is a cost associated with running the application from servers on the cloud.  We've taken strides to reduce this cost as much as possible, so that the use of our product is as affordable as it is performant.  GreekRho+ takes away the stress of running your GreekRho instance yourself, and provides the support and maintenance of our engineers at an affordable price.  See the cost breakdown below to compare the cost of hosting the app yourself, vs. the cost of using GreekRho+.</p>
+					<p>Run GreekRho on the GreekRho+ network!  There's a lot that goes into hosting a web application.  By utilizing the GreekRho network, you benefit from the scale and performance of a platform using state-of-the-art AWS-powered infrastructure.  We've done the heavy-lifting so you don't have to!</p>
+					<p>GreekRho+ also gives you access to the most up-to-date supported releases of GreekRho.  This means that your application will be supported by our team of engineers, and will automatically be kept up-to-date with regular updates.</p>
                     <p>If you're interested in registering for GreekRho+, fill out this form, and a representative will be in touch shortly.</p>
 					<hr />
 					<RegisterForm formSubmitted={ formSubmitted } setFormSubmitted={ setFormSubmitted }/>
                 </div>
-                <div className="paragraph-bubble">
-
-                    <h3>Cost Breakdown</h3>
-                    <p>Hosting a full scale web app isn't easy, and can be expensive.  The trouble is, by doing it yourself you end up paying for more than you need.  By sharing infrastructure among a larger base of GreekRho users, you can reduce costs so you're only paying for what you use.  We value transparency with our customers, which is why we're comfortable comparing our prices.  See below for a breakdown of the cost of the underlying infrastructure that we use, compared to our pricing model:</p>
-                    <table className="table table-responsive-md">
-                        <thead>
-                            <tr>
-                                <th scope="col"></th>
-                                <th scope="col">GreekRho+</th>
-                                <th scope="col">AWS Service</th>
-                                <th scope="col" style={{minWidth: "150px"}}>AWS Cost</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">Compute</th>
-                                <td></td>
-                                <td>EC2 t2.micro Instance</td>
-                                <td>$8.64 / month</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Load Balancing</th>
-                                <td></td>
-                                <td>Application Load Balancer</td>
-                                <td>$16.74 / month</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Relational Database</th>
-                                <td></td>
-                                <td>RDS db.t2.micro Instance</td>
-                                <td>$13.39 / month</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Total</th>
-                                <td></td>
-                                <td></td>
-                                <td><b>$38.77 / month</b></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                
             </div>
         </>
     )
